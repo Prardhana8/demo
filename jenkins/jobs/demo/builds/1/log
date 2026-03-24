@@ -1,0 +1,26 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /home/coder/project/workspace/jenkins/workspace/demo
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Prardhana8/demo.git
+ > git init /home/coder/project/workspace/jenkins/workspace/demo # timeout=10
+Fetching upstream changes from https://github.com/Prardhana8/demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/Prardhana8/demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Prardhana8/demo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 1b2edb88d1de32d4d726a4968fa8511362c4961a (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1b2edb88d1de32d4d726a4968fa8511362c4961a # timeout=10
+Commit message: "Initial commit"
+First time build. Skipping changelog.
+[demo] $ /bin/sh -xe /tmp/jenkins9332711638214187858.sh
++ python3 Project/add_page.py
+python3: can't open file '/home/coder/project/workspace/jenkins/workspace/demo/Project/add_page.py': [Errno 2] No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
